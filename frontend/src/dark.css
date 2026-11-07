@@ -1,0 +1,264 @@
+.appearance {
+  padding: 14px 40px 0;
+  max-width: 1540px;
+  margin: auto;
+}
+.appearance-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.theme-picker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+}
+.theme-picker select {
+  width: auto;
+  min-height: 40px;
+  padding: 7px 28px 7px 10px;
+}
+.shortcut-button {
+  min-height: 40px;
+  font-size: 11px;
+}
+.shortcut-button:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+.appearance-message {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
+}
+:root[data-theme="dark"] {
+  color: #e3ece5;
+  background: #131e19;
+  --green: #97d2af;
+  --lime: #c9e6a2;
+  --muted: #acbcb0;
+  --border: #3c5143;
+  --surface: #1d2b23;
+  --soft: #25382b;
+  --subtle: #18271e;
+}
+:root[data-theme="dark"] button {
+  color: inherit;
+}
+:root[data-theme="dark"] .nav-item {
+  color: #a4b7a9;
+}
+:root[data-theme="dark"] .nav-item.active {
+  color: #d4edb7;
+}
+:root[data-theme="dark"]
+  :is(
+    .panel,
+    .search,
+    .stats > div,
+    .profile-stats > div,
+    .order-card,
+    .view-toggle,
+    .secondary,
+    .chat-message,
+    input,
+    textarea,
+    select,
+    .integration-form input,
+    .integration-form select,
+    .integration-form textarea,
+    .integration-picker select
+  ) {
+  background: var(--surface);
+  color: #e3ece5;
+  border-color: var(--border);
+}
+:root[data-theme="dark"] :is(.topbar, .modal, .empty, .evidence) {
+  background: var(--subtle);
+  border-color: var(--border);
+}
+:root[data-theme="dark"]
+  :is(
+    .secondary:hover:not(:disabled),
+    .icon-button:hover,
+    .board-column,
+    .note-panel,
+    .stats .stat-note,
+    .tiny-cat,
+    .file-icon,
+    .empty-icon,
+    .profile-banner,
+    .project-symbol,
+    .consultant-banner,
+    .job-progress,
+    .chat-message.owner,
+    .view-toggle button[aria-pressed="true"]
+  ) {
+  background: var(--soft);
+  color: #c1d9b1;
+  border-color: var(--border);
+}
+:root[data-theme="dark"]
+  :is(
+    .topbar b,
+    .topbar > span,
+    .topbar .local-badge,
+    .eyebrow,
+    .source-label,
+    .order-card > p,
+    .card-bottom,
+    .card-bottom > span:last-child,
+    .stat-note p,
+    .stat-note b,
+    .empty p,
+    .column-empty,
+    .loading,
+    .footer-state,
+    label,
+    .form-note,
+    .back,
+    .muted,
+    .note-panel p,
+    .composer-heading p,
+    .extract-warnings p,
+    .section-heading span,
+    .profile-banner strong,
+    .profile-stats > div > span:last-child,
+    .capability p,
+    .project p,
+    .risk-list,
+    .rules p,
+    .revision-snapshot p,
+    .consultant-banner strong,
+    .consultant-toolbar p,
+    .job-progress small,
+    .component-assessment p,
+    .component-assessment .verification,
+    .request-row > span,
+    .chat-message strong,
+    .integration-panel a,
+    .integration-proposal p,
+    .revision-pill,
+    .provenance summary,
+    .request-journal summary
+  ) {
+  color: var(--muted);
+}
+:root[data-theme="dark"] :is(input, textarea)::placeholder {
+  color: #a5b5a6;
+}
+:root[data-theme="dark"] .search input {
+  background: transparent;
+}
+:root[data-theme="dark"] .primary {
+  background: #307153;
+  color: #fff;
+}
+:root[data-theme="dark"] .primary:hover:not(:disabled) {
+  background: #3b815f;
+}
+:root[data-theme="dark"] :is(.text-button, .tabs button[aria-selected="true"]) {
+  color: var(--green);
+}
+:root[data-theme="dark"] :is(.status.new, .category.unknown) {
+  background: #283951;
+  color: #c0d2f0;
+}
+:root[data-theme="dark"]
+  :is(.status.discussion, .category.A, .extract-state.ready, .recommendation) {
+  background: #29462f;
+  color: #c8e4b0;
+}
+:root[data-theme="dark"]
+  :is(
+    .extract-state,
+    .category.B,
+    .consultant-warning,
+    .recommendation.clarify
+  ) {
+  background: #443b25;
+  color: #eddaa6;
+}
+:root[data-theme="dark"]
+  :is(
+    .status.declined,
+    .category.C,
+    .extract-state.failed,
+    .recommendation.decline,
+    .error
+  ) {
+  background: #492f29;
+  color: #f0c4b2;
+  border-color: #795448;
+}
+:root[data-theme="dark"]
+  :is(
+    .card-bottom,
+    .component-assessment,
+    .analysis-item,
+    .integration-file,
+    .integration-proposal,
+    .extract-block,
+    .claim-sources p
+  ) {
+  border-color: var(--border);
+}
+:root[data-theme="dark"]
+  :is(
+    .integration-form input,
+    .integration-form select,
+    .integration-form textarea,
+    .integration-picker select
+  ) {
+  color: #e3ece5;
+}
+@media (max-width: 1150px) {
+  .appearance {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media (max-width: 760px) {
+  .appearance {
+    padding: 12px 18px 0;
+  }
+  .appearance-controls {
+    justify-content: space-between;
+  }
+  .appearance-message {
+    text-align: left;
+  }
+}
+
+.browser-login .login-code {
+  display: block;
+  font-size: 2.5rem;
+  letter-spacing: 0.22em;
+  font-variant-numeric: tabular-nums;
+  margin: 1rem 0;
+}
+.login-link {
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+.browser-login p {
+  overflow-wrap: anywhere;
+}
+
+:root[data-theme="dark"] :is(.status.accepted, .status.in_progress) {
+  background: #29462f;
+  color: #c8e4b0;
+}
+:root[data-theme="dark"] :is(.status.completed, .status.closed) {
+  background: #283951;
+  color: #c0d2f0;
+}
+:root[data-theme="dark"] .status.cancelled {
+  background: #492f29;
+  color: #f0c4b2;
+}

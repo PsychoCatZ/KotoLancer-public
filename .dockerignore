@@ -1,0 +1,20 @@
+# Allowlist: credentials, data, local build output and Git never enter the build context.
+**
+!Dockerfile
+!.dockerignore
+!requirements-prod.lock
+!alembic.ini
+!kotolancer/
+!kotolancer/**
+kotolancer/**/__pycache__/
+!migrations/
+!migrations/**
+migrations/**/__pycache__/
+!frontend/
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/index.html
+!frontend/tsconfig.json
+!frontend/vite.config.ts
+!frontend/src/
+!frontend/src/**
